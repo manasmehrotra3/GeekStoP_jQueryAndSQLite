@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>GeekStoP</title>
+  <meta name="description" content="Online Shopping Portal" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <script>
+  	function submitHandler() {
+  		var name= (document.getElementById("name")).value;
+  		var title= document.getElementById("title").value;
+  		var password= document.getElementById("password").value;
+  		var passwordConfirm= document.getElementById("passwordConfirm").value;
+
+  		 if(password==passwordConfirm)
+  		 {
+  		 	sessionStorage.name= name;
+  		 	sessionStorage.password= password;
+  		 	sessionStorage.email= email;
+  		 	return true;
+  		 }
+  		 else
+  		 {
+  		 	alert("Incorrect Password");
+  		    return false;
+  		 }
+  	}
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <h1>GeekStoP</h1>
+        <div class="slogan">One Stop Shop for all Geeks</div>
+      </div>
+    </div>
+    <div id="site_content">
+     <div id="content">
+        <!-- insert the page content here -->
+        <h1>Welcome to GeekStop</h1>
+        <form name="registrationForm" method="post" action="selectProduct.html" onsubmit="return submitHandler()">
+        	<fieldset>
+        	 <table hspace="200px">
+        	  <tr>
+        	  	<th>Registration Page</th>
+        	  </tr>	
+        	  <tr>
+        	  	<td>
+        	  	   <label>Title:</label>
+        	  	</td>
+        	  	<td>
+        	  	   <input type="text" id="title" placeholder="Mr/Ms/Mrs" required="true" />
+        	  	</td>
+        	  </tr>
+        	   <tr>
+        	  	<td>
+        	  	   <label>Name:</label>
+        	  	</td>
+        	  	<td>
+        	  	   <input type="text" id="name" placeholder="Enter Name" required="true" />
+        	  	</td>
+        	  </tr>
+        	  <tr>
+        	  	<td>
+        	  	   <label>Password:</label>
+        	  	</td>
+        	  	<td>
+        	  	   <input type="password" id="password" placeholder="Enter Password" required="true" />
+        	  	</td>
+        	  </tr>
+        	   <tr>
+        	  	<td>
+        	  	   <label>Confirm Password:</label>
+        	  	</td>
+        	  	<td>
+        	  	   <input type="password" id="passwordConfirm" placeholder="Confirm Password" required="true" />
+        	  	</td>
+        	  </tr>
+        	  <tr>
+        	  	<td>
+        	  	   <label>Email</label>
+        	  	</td>
+        	  	<td>
+        	  	   <input type="email" id="email" placeholder="Enter email" required="true" />
+        	  	</td>
+        	  </tr>
+        	  <tr>
+        	  	<td></td>
+        	  	<td>
+        	  		<input type="submit" value="&nbsp;Submit&nbsp;" />
+       
+        	  		<a href="login.html" style="color: black"><u>Already Registered?</u></a>
+        	  	</td>
+        	  </tr>
+        	 </table> 
+        	</fieldset>
+       </form>
+      </div>
+    </div>
+    <div id="footer">
+      <p>Copyright &copy; Accenture RIA Solution Factory </p>
+    </div>
+  </div>
+</body>
+</html>
